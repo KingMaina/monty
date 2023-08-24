@@ -12,3 +12,19 @@ void stream_error(char *fileName)
 	/* free_args(); */
 	exit(EXIT_FAILURE);
 }
+
+/**
+* opcode_error - Handles errors when reading an instruction
+* @opcode: The opcode
+*
+* Return: void
+*/
+void opcode_error(char *opcode)
+{
+	fprintf(stderr, "L%d: unknown instruction %s\n", _args->line_number, opcode);
+	close_stream();
+	free_tokens();
+	free_args();
+	exit(EXIT_FAILURE);
+}
+

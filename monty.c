@@ -23,8 +23,8 @@ int main(int argc, char **argv)
 
 	while (getline(&_args->line, &n, _args->stream) != -1)
 	{
-		args->line_number += 1;
-		tokenize_command();
+		_args->line_number += 1;
+		tokenize();
 		get_opcode();
 		run_opcode();
 		free_tokens();

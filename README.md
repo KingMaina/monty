@@ -1,5 +1,3 @@
-//add emojis too
-
 # Monty ByteCodes Interpreter
 
 ## Table of Contents
@@ -40,4 +38,3 @@ gcc -Wall -Werror -Wextra -pedantic *.c -o monty
 ## Authors
 
 * **KingMaina** - [KingMaina](https://github.com/KingMaina)
-

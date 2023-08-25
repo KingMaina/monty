@@ -5,7 +5,7 @@
 */
 void free_all(void)
 {
-  close_stream();
-  free_tokens();
-  free_args();
+	close_stream();
+	free_tokens();
+	free_args();
 }

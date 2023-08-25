@@ -5,7 +5,7 @@
 *
 * Return: void
 */
-void free_args()
+void free_args(void)
 {
 	if (!_args)
 		return;

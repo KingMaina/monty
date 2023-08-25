@@ -17,9 +17,9 @@
  */
 typedef struct stack_s
 {
-        int n;
-        struct stack_s *prev;
-        struct stack_s *next;
+	int n;
+	struct stack_s *prev;
+	struct stack_s *next;
 } stack_t;
 
 /**
@@ -32,51 +32,50 @@ typedef struct stack_s
  */
 typedef struct opcode
 {
-        char *opcode;
-        void (*f)(stack_t **stack, unsigned int line_number);
+	char *opcode;
+	void (*f)(stack_t **stack, unsigned int line_number);
 } opcode_t;
 
 /**
-* struct arguments - store op codes
-* @stream: File stream
-* @line: a line of text input
-* @line_number: line number
-* @tokens: array of tokens
-* @num_tokens: number of tokens
-* @stack_len: length of stack
-* @head: head of stack
-* @opcode: opcode
-*
-* Description: store op codes
-* for stack, queues, LIFO, FIFO
-*/
+ * struct arguments - store op codes
+ * @stream: File stream
+ * @line: a line of text input
+ * @line_number: line number
+ * @tokens: array of tokens
+ * @num_tokens: number of tokens
+ * @stack_len: length of stack
+ * @head: head of stack
+ * @opcode: opcode
+ *
+ * Description: store op codes
+ * for stack, queues, LIFO, FIFO
+ */
 typedef struct arguments
 {
 	FILE *stream;
 	char *line;
-        unsigned int line_number;
-        char **tokens;
-        int num_tokens;
-        int stack_len;
-        stack_t *head;
-        opcode_t *opcode;
+	unsigned int line_number;
+	char **tokens;
+	int num_tokens;
+	int stack_len;
+	stack_t *head;
+	opcode_t *opcode;
 } argSpec;
 
-
-void init_args();
+void init_args(void);
 void read_stream(char *fileName);
 void stream_error(char *fileName);
-void tokenize();
-void get_opcode();
-void run_opcode();
-void opcode_error();
+void tokenize(void);
+void get_opcode(void);
+void run_opcode(void);
+void opcode_error(char *opcode);
 int is_number(char *str);
-void close_stream();
-void free_args();
-void free_tokens();
-void free_all();
-void free_head();
-void free_stack();
+void close_stream(void);
+void free_args(void);
+void free_tokens(void);
+void free_all(void);
+void free_head(void);
+void free_stack(stack_t *stack);
 void push(stack_t **stack, unsigned int line_number);
 void pall(stack_t **stack, unsigned int line_number);
 extern argSpec *_args;

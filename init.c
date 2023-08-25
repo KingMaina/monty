@@ -1,6 +1,11 @@
 #include "monty.h"
 
-void init_args()
+/**
+ * init_args - Initializes the arguments
+ *
+ * Return: void
+ */
+void init_args(void)
 {
 	_args = malloc(sizeof(argSpec));
 	if (!_args)

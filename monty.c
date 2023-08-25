@@ -13,7 +13,7 @@ int main(int argc, char **argv)
 {
 	size_t n = 0;
 
-	if (argc != 2) 
+	if (argc != 2)
 	{
 		fprintf(stderr, "USAGE: monty file\n");
 		exit(EXIT_FAILURE);

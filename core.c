@@ -1,6 +1,5 @@
 #include "monty.h"
 
-#define DELIMS " \n"
 /**
  * tokenize - Tokenize the line read from the stream.
  *

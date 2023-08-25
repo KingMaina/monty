@@ -1,6 +1,14 @@
 #include "monty.h"
 
+void nothing(void);
 argSpec *_args = NULL;
+
+/**
+ * nothing - Does nothing.
+ *
+ * Return: void
+ */
+void nothing(void){}
 
 /**
 * main - Entry point of monty application

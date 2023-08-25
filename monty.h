@@ -1,10 +1,13 @@
 #ifndef __MONTY_H
 #define __MONTY_H
+
 #include <fcntl.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
 #include <string.h>
+
+#define DELIMS " \n"
 
 /**
  * struct stack_s - doubly linked list representation of a stack (or queue)

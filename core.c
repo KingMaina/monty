@@ -54,6 +54,11 @@ void get_opcode(void)
 	opcode_t opcodes[] = {
 		{"push", push},
 		{"pall", pall},
+		{"pint", pint},
+		{"pop", pop},
+		{"swap", swap},
+		{"add", add},
+		{"nop", nop},
 		{NULL, NULL}
 	};
 	if (_args->num_tokens == 0)
